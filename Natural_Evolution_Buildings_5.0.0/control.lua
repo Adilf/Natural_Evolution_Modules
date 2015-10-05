@@ -236,7 +236,7 @@ function Remove_Mind_Control()
         table.remove(global.minds, k)
       else -- is valid
         local controlled = false --assume out of range
-        if surface.find_entities_filtered{name="AlienControlStation", area=Get_Bounding_Box(mind.position, NEConfig.Unit_Search_Distance)}[1] then --a AlienControlStation is in range
+        if mind.surface.find_entities_filtered{name="AlienControlStation", area=Get_Bounding_Box(mind.position, NEConfig.Unit_Search_Distance)}[1] then --a AlienControlStation is in range
           controlled = true
           break
         end
